@@ -12,7 +12,7 @@ Step 1: clone repository
 
 Run the following:
 ```
-git clone <repo url>
+git clone https://github.com/zyke-99/plumery-workflow-demo.git
 ```
 Then change directory by running:
 ```

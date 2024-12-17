@@ -1,0 +1,91 @@
+{
+	"info": {
+		"_postman_id": "3c88953b-64c5-4c14-bbcb-611193671355",
+		"name": "plumery-workflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36656998"
+	},
+	"item": [
+		{
+			"name": "start onboarding",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"email@domain.com\",\n  \"phoneNumber\": \"+123456789\",\n  \"firstName\": \"John\",\n  \"lastName\": \"Doe\",\n  \"passportInformation\": \"23344566\",\n  \"taxId\": \"ro-332211\",\n  \"residenceAddress\": \"Foo street, Bar\",\n  \"selfie\": \"base64encodedstringofselfie\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/onboarding",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"onboarding"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "phone confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"onboardingId\": \"a8ba1be088753799cdf8676902070b7e9e6d4f1989efd83b7003c9212755826c\",\n    \"code\": \"2222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/phone",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"phone"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "selfie confirm",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"onboardingId\": \"a8ba1be088753799cdf8676902070b7e9e6d4f1989efd83b7003c9212755826c\",\n    \"isSuccess\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/selfie",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"selfie"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

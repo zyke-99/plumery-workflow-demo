@@ -18,7 +18,7 @@ class OnboardingWorkflowImpl : OnboardingWorkflow {
     private var isSelfieVerified = false
 
     private val options: ActivityOptions = ActivityOptions.newBuilder()
-        .setStartToCloseTimeout(Duration.ofDays(1))
+        .setStartToCloseTimeout(Duration.ofMinutes(1))
         .setRetryOptions(
             RetryOptions.newBuilder()
                 .setInitialInterval(Duration.ofSeconds(5))
